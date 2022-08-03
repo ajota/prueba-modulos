@@ -1,4 +1,4 @@
-import { componentesAnidados, componentesContenedores } from "./componentes.enum";
+import { componentesAnidados, componentesContenedores } from "../ui/componentes.enum";
 
 /**
  * Define el tipo con la lista de valores que acepta un elemento de tipo ComponentesContenedores.

@@ -1,4 +1,4 @@
-import { BaseComponentes, ComponentesAnidados, ComponentesContenedores } from "./contenido.interface";
+import { BaseComponentes, ComponentesAnidados, ComponentesContenedores } from "../datos/contenido.interface";
 
 class Componente<D> implements BaseComponentes<ComponentesContenedores, D> {
     tipo: ComponentesContenedores;
