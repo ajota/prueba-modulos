@@ -1,4 +1,4 @@
-export interface ITransportar<M, D>{
+export interface Transportar<M, D>{
     datos: D;
 
     observar ( modulo: M ): void;

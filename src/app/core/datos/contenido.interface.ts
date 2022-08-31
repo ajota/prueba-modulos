@@ -11,7 +11,7 @@ export type ComponentesAnidados = componentesAnidados; // Subcomponentes
 /**
  * Define la estructura y el nivel de anidacion que se acepta en las propiedades con este tipo.
  */
-export type Datos = {  [key:string]: string | number | boolean };
+export type Datos = { [key:string]: string | number | boolean };
 
 /**
  * Contrato de la estrutura que deberan seguir los elementos que seran considarados como componentes o subcomponentes. 

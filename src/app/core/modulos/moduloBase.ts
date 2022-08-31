@@ -1,27 +1,22 @@
-import { Modulo } from "./modulo.interface";
+import {  Mediador } from "./mediador";
+
+export class ModuloBase<T>{
+
+    private mediador = new Mediador<T>();
 
 
-class ModuloBase implements Modulo{
-
-    configDatos: any;
-
-    constructor( modulo, datos){}
-    
-    config(modulo: any) {
-        throw new Error("Method not implemented.");
+    recibir(nombreModulo) {
+        let mensaje;
+        for (let item in this.mediador.datos ) {
+            mensaje = item[nombreModulo];
+            if( mensaje ) break;
+        }
+        return mensaje;
     }
 
-    recibir(datos: any) {
-        throw new Error("Method not implemented.");
+    enviar(nombreModulo: string, datos: T) {
+        this.mediador.comunicar(nombreModulo, datos);
+        return datos;
     }
-
-    transmitir(datos: any) {
-        throw new Error("Method not implemented.");
-    }
-    
-    destruir(modulo: any) {
-        throw new Error("Method not implemented.");
-    }
-
 
 }
